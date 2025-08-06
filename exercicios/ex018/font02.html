@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        
+        @font-face{
+            font-family: 'BangBang';
+            src: url('fonts/WesternBangBang-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+
+            /*
+                Tipos de format()
+                - opentype (otf)
+                - truetype (ttf)
+                - embedded-opentype
+                - truetype-aat (Appple Advanced Typography)
+                - svg
+                Obs do dudu: para funcionar a font ttf deve estar com formato true type, tentar colocar ela com opentype ira fazer com que não funcione nenhbum dos dois!
+            */
+        }
+   body{
+    font-family: 'BangBang', sans-serif;
+    font-size: 2em;
+   }     
+
+   h1{
+    font-family: 'BangBang', Times, serif;
+    font-size: 2em;
+    font-weight: normal;
+   }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sunt impedit porro delectus quam voluptate quisquam similique, eligendi fugit inventore perspiciatis, esse, voluptatibus illum distinctio iure. Iusto cupiditate iure nostrum?</p>
+</body>
+</html>
