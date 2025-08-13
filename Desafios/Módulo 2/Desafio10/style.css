@@ -1,188 +1,214 @@
 @charset "UTF-8";
 
+/*
+#c5ebd6
+#83a1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 @font-face{
-    font-family: '';
-    src: url('') format('opentype');
+    font-family: 'Android';
+    src: url('pacote-projeto-d010/fontes/idroid.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;
 }
 
+:root{
+    --cor0: #c5ebd6;
+    --cor1: #9fe4b0;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
 
-
-.centralizado{
-    display: block;
-    margin: auto;
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: 'Android', sans-serif;
 }
 
-nav{
-    background-color: rgb(2, 75, 2);
+*{
+    margin: 0px;
+    padding: 0px;
 }
+
 
 body{
-    background-color: rgba(245, 216, 173, 0.658);
-    margin: 0px 0px 0px 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after{
+    content: '\00A0🔗';
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+main strong{
+    color: var(--cor4);
+    font-weight: bolder;
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: #3ddc859d;
+    padding: 2px 6px;
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4);
 }
 
 header{
-    background: linear-gradient(rgb(94, 209, 94), rgb(12, 129, 38), rgb(2, 75, 2));
-    margin: 0px 0px  0px 0px;
+   background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 30px;
 }
 
 header > h1{
-    font-family: 'Ethno';
-    color: rgb(213, 255, 217);
-    text-shadow: 2px 2px 5px black;
-    text-align: center;
-    margin-top: 0px;
-    
-}
-
-h2{
-    background: linear-gradient(to right green);
-}
-
-header > p{
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
-    text-shadow: 2px 3px 6px black;
-    text-align: center;
-   padding: 0px 5px 10px 5px;
-   margin-bottom: 0px;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.486);
+}
+
+header> p{
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.384);
 }
 
 nav > a{
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: rgb(154, 255, 187);
+    padding: 10px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin-left: 9px;
-    
+    transition: 0.3s;
 }
 
 nav > a:hover{
-    color: rgb(231, 255, 234);
-    background-color: rgb(8, 105, 8);
-    text-decoration: none;
+    background-color: var(--cor3);
+    color: var(--cor5);
 }
 
 main{
-    
-    background-color: rgb(255, 255, 255);
-    margin: 0px 80px 0px 80px;
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-main > h1{
-    margin-top: 0px;
+main img{
+    width: 100%;
 }
 
-main > p > a{
-    color: rgb(2, 116, 2);
-    background-color: rgb(175, 248, 175);
-    text-decoration: none;
-    font-weight: bold;
+main .pequena{
+   max-width: 350px;
+   display: block;
+   margin: auto;
 }
 
-main > p > a::after{
-    content: '🔗';
+main h1{
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
 }
 
-main > p > a:hover{
-    text-decoration: underline;
+main h2{
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+    text-indent: 8px;
 }
 
-.fundo{
-    background-color: green;
-   
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
 }
 
-article{
-    background-color: rgb(255, 255, 255);
-    margin: 3px 0px 0px 0px;
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 }
 
-aside > iframe{
-    padding: 20px 25px 20px 25px;
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.295);
+}
+
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul{
+    /* O 2714 foi usado para criar o selo de verificado na lista o V, e o 00A0 é o espaçamento 2x*/
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
 }
 
 footer{
-   display: flex;
-   justify-content: center;
-   padding-top: 0px;
-}
-
-.quadro{
-    background-color: white;
-    border-radius: 10px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    width: 743px;
-    padding: 20px;
-    margin-top: 0;
-    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.342);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h3{
-    background-color: rgb(21, 161, 68);
-    color: white;
-    padding: 2px 0px 2px 10px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    margin: 18px 0px 0px 0px;
-} 
-
-.sub-quadro{
-     background-color: #91e2919d;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);
-}
-
-div > p{
-    margin: 0px 0px 0px 0px;
-}
-
-ul{
-    margin: 0px 0px 0px 0px;
-    text-decoration: underline;
-}
-
-div > p > a{
-    color: rgb(2, 116, 2);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-div > p > a:hover{
-    text-decoration: underline;
-}
-
-div > p > a::after{
-    content: '🔗';
-}
-
-.verde{
-    color: green;
-    font-weight: bold;
-}
-
-.branco{
-    color: white;
-    font-weight: bold;
-}
-
-.branco:hover{
-        color: white;
-    font-weight: bolder;
-    text-decoration: underline;
-}
-
-.credito{
-    background-color: #2C332F;
+    background-color: var(--cor5);
     color: white;
     text-align: center;
-    padding: 10px 0px 10px 0px;
-    margin-bottom: 0px;
+    font-size: 0.8em;
+    padding: 5px;
 }
 
+footer a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: var(--cor2);
+}
