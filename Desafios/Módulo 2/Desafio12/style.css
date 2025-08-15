@@ -8,60 +8,64 @@
 
 *{
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif; 
+    padding: 0px;
+}
+
+html, body{
+    min-height: 100vh;
+    background-color: darkgrey;
 }
 
 header{
     background-color: black;
     color: white;
-    padding-bottom: 40px;
-    
+    text-align: center;
 }
 
 header > h1{
-    font-family: var(--fonte1);
-    margin: 0px 30px 8px 30px;
-    padding: 40px 0px 0px 0px;
-    text-align: center;
-    font-size: 45px;
+    padding-top: 50px;
     font-variant: small-caps;
 }
 
 header > p{
- text-align: center;
- margin: 5px 0px 0px 0px;
- padding-bottom: 0px;
+    padding-bottom: 50px;
 }
 
-header > p > a {
-    text-decoration: none;
+a{
     color: white;
-    font-weight: 800;
+    text-decoration: none;
+    font-weight: bolder;
 }
 
-header > p > a:hover{
+a:hover{
     text-decoration: underline;
 }
 
-section > p{
- font-family: var(--fonte2);
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
 }
 
-section#caixa1{
-    padding:  75px 0px 75px 30px;
-    font-size: 25px;
+section.normal{
+    background-color: white;
+    color: black;
 }
 
-section#caixa2{
-    display: block;
+section.imagem{
+    background-color: rgba(0, 0, 0, 0.473);
     color: white;
-    padding: 75px 500px 75px 30px;
-    font-size: 25px;
-    background: rgb(0, 0, 0) url(imagens/background001.jpg) center center no-repeat fixed;
-
 }
 
-section#caixa2 > p{
- background-color: rgba(0, 0, 0, 0.315);
- 
+section.imagem > p{
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.363);
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
